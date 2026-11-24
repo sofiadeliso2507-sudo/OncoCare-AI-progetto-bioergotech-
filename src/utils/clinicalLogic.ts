@@ -3,7 +3,7 @@ import type {
   PatientProfile,
   SymptomEntry,
   UrgencyLevel,
-} from '../types/onco';
+} from '../types/onco.ts';
 
 const ROME_TZ = 'Europe/Rome';
 

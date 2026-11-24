@@ -13,14 +13,14 @@ import {
   getPatientByCode,
   getSymptoms,
   markDoseAssunta,
-} from './clinicalStore';
-import type { SymptomCategory, UrgencyLevel } from '../src/types/onco';
+} from './clinicalStore.ts';
+import type { SymptomCategory, UrgencyLevel } from '../src/types/onco.ts';
 import {
   formatRomeTimeOnly,
   formatUtcToRome,
   getRomeDateParts,
   isSameRomeDay,
-} from '../src/utils/clinicalLogic';
+} from '../src/utils/clinicalLogic.ts';
 
 const TRUSTED_DOMAINS = [
   'pharmgkb.org',

@@ -2,7 +2,6 @@ import express from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { createServer as createViteServer } from 'vite';
 import {
   addAppointment,
   addBookingReminder,
@@ -26,9 +25,9 @@ import {
   respondToAlert,
   updatePatientConsents,
   upsertPatientProfile,
-} from './server/clinicalStore';
-import { runOncoCareAgent } from './server/oncoAgent';
-import type { PatientProfile, SymptomCategory, UrgencyLevel } from './src/types/onco';
+} from './server/clinicalStore.ts';
+import { runOncoCareAgent } from './server/oncoAgent.ts';
+import type { PatientProfile, SymptomCategory, UrgencyLevel } from './src/types/onco.ts';
 
 dotenv.config();
 
@@ -37,7 +36,7 @@ const __dirname = path.dirname(__filename);
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = Number(process.env.PORT) || 3000;
 
   app.use(express.json({ limit: '1mb' }));
 
@@ -522,6 +521,7 @@ async function startServer() {
 
   // --- Vite / Static Frontend ---
   if (process.env.NODE_ENV !== 'production') {
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',

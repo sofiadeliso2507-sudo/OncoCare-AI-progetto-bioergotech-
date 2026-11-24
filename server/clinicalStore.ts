@@ -7,7 +7,7 @@ import {
   createSeedMessages,
   createSeedPatients,
   createSeedSymptoms,
-} from '../src/data/seedData';
+} from '../src/data/seedData.ts';
 import type {
   AppointmentItem,
   BookingReminderItem,
@@ -19,14 +19,14 @@ import type {
   SymptomCategory,
   SymptomEntry,
   UrgencyLevel,
-} from '../src/types/onco';
+} from '../src/types/onco.ts';
 import {
   canDoctorAccessClinicalData,
   canDoctorAccessSymptomDiary,
   canMarkDoseAsAssunta,
   evaluateSymptomAlert,
   normalizeIntensity,
-} from '../src/utils/clinicalLogic';
+} from '../src/utils/clinicalLogic.ts';
 
 export interface ClinicalDatabase {
   doctors: DoctorProfile[];

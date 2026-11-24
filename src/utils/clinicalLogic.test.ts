@@ -10,7 +10,7 @@ import {
   getRomeDateParts,
   isSameRomeDay,
   normalizeIntensity,
-} from './clinicalLogic';
+} from './clinicalLogic.ts';
 
 test('getRomeDateParts converts UTC to Europe/Rome CET (+1 in November)', () => {
   // 2026-11-24T09:00:00Z in winter CET (+1) is 10:00 in Rome (Tuesday = martedì)

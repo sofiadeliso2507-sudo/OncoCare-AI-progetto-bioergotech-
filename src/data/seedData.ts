@@ -7,7 +7,7 @@ import type {
   MedicationScheduleItem,
   PatientProfile,
   SymptomEntry,
-} from '../types/onco';
+} from '../types/onco.ts';
 
 /**
  * Generates a UTC ISO string offset from today at a specific Europe/Rome local hour/minute.
