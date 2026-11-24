@@ -1,0 +1,6 @@
+{
+  "name": "OncoCare AI",
+  "description": "Piattaforma intelligente di supporto al follow-up oncologico per pazienti e professionisti sanitari (prototipo didattico e di ricerca).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
